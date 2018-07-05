@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog  title="Seller/Buyer F4" items="{buyerJson>/results/0/F4BySlrNav/results}" class="sapUiSmallMarginBottom dialogHeaders" confirm="handleshippartyclose" cancel="handleshippartyclose"
+		liveChange="BuyserSearch" search="BuyserSearch">
+		<StandardListItem title="{buyerJson>Valpos}" description="{buyerJson>Ddtext}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

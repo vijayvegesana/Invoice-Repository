@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>Asserts}" items="{Asset>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="AssetValueHelpClose"
+		cancel="AssetValueHelpClose" liveChange="AssetSearch" search="AssetSearch">
+		<StandardListItem title="{Asset>Anln1}" description="{Asset>Txt50}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,300 @@
+<mvc:View controllerName="com.olam.prof.del.controller.Worklist" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<App id="View1">
+		<pages>
+			<Page title="{i18n>title}" class="pageBackgroundImgClass" showNavButton="true" navButtonPress="onBack">
+				<f:Form id="idFPOrd" editable="true" class="sapUiSizeCompact">
+					<f:layout>
+							<f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0"
+								emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false"/>
+						</f:layout>
+						<f:formContainers>
+							<f:FormContainer>
+								<f:formElements>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>DeliveryNo}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" maxLength="10" valueHelpRequest="onPurchaseDocF4" width="70%" showValueHelp="true" id="InvoicedQuantity1"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>shiptoparty}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false"  width="70%" id="shiptoparty"/>
+										</f:fields>
+									</f:FormElement>
+								</f:formElements>
+							</f:FormContainer>
+							<f:FormContainer>
+								<f:formElements>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>docDate}"></Label>
+										</f:label>
+										<f:fields>
+											<DatePicker class="InputAlignRes" enabled="false" width="70%"  valueFormat="yyyy-MM-dd" displayFormat="dd-MM-yyyy" id="InvoicedQuantity11"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>shiptopartyDesc}"></Label>
+										</f:label>
+										<f:fields>
+											<Text class="InputAlignRes" enabled="false"  width="70%" id="shiptopartyDesc"/>
+										</f:fields>
+									</f:FormElement>
+								</f:formElements>
+							</f:FormContainer>
+							</f:formContainers>
+					</f:Form>
+				<content>
+					<f:Form id="idSecondForm" editable="true" class="sapUiSizeCompact">
+						<f:toolbar >
+							<Toolbar>
+								<Title text="{i18n>OverViewPod}" class="panelHeaderTextClass"/>
+								<ToolbarSpacer/>
+									<Title id="completionStatusId" level="H4" class="panelHeaderTextClass"/>
+								<Switch type="AcceptReject" state="false" id="btnswitch" change="buttonChange" />
+								<!--<Button icon="sap-icon://message-success" type="Accept" text="" -->
+								<!--tooltip="Confirm.proof.of.delivery" press="onRollover" id="ConfirmBtn"/>-->
+								<!--	<Button icon="sap-icon://decline" type="Reject" tooltip="Cancel.proof.of.delivery" id="DeclineBtn"/>-->
+							<!--	<core:Icon src="sap-icon://lightbulb" id="bulbIconId"></core:Icon>-->
+							</Toolbar>
+						</f:toolbar>
+						<f:layout>
+							<f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0"
+								emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false"/>
+						</f:layout>
+						<f:formContainers>
+							<!--<f:FormContainer>-->
+							<!--	<f:formElements>-->
+							<!--		<f:FormElement>-->
+							<!--			<f:label>-->
+							<!--				<Label class="lblAlignRes" text="{i18n>Vendor}"></Label>-->
+							<!--			</f:label>-->
+							<!--			<f:fields>-->
+							<!--				<Input class="InputAlignRes" enabled="false" id="Vendor">-->
+							<!--					<customData>-->
+							<!--						<core:CustomData value=""></core:CustomData>-->
+							<!--					</customData>-->
+							<!--				</Input>-->
+							<!--			</f:fields>-->
+							<!--		</f:FormElement>-->
+							<!--		<f:FormElement>-->
+							<!--			<f:label>-->
+							<!--				<Label class="lblAlignRes" text="{i18n>MaterialGroup}"></Label>-->
+							<!--			</f:label>-->
+							<!--			<f:fields>-->
+							<!--				<Input class="InputAlignRes" enabled="false" id="MaterialGroup">-->
+							<!--					<customData>-->
+							<!--						<core:CustomData value=""></core:CustomData>-->
+							<!--					</customData>-->
+							<!--				</Input>-->
+							<!--			</f:fields>-->
+							<!--		</f:FormElement>-->
+							<!--		<f:FormElement>-->
+							<!--			<f:label>-->
+							<!--				<Label class="lblAlignRes" text="{i18n>Material}"></Label>-->
+							<!--			</f:label>-->
+							<!--			<f:fields>-->
+							<!--				<Input class="InputAlignRes" enabled="false" id="Material">-->
+							<!--					<customData>-->
+							<!--						<core:CustomData value=""></core:CustomData>-->
+							<!--					</customData>-->
+							<!--				</Input>-->
+							<!--			</f:fields>-->
+							<!--		</f:FormElement>-->
+							<!--	</f:formElements>-->
+							<!--</f:FormContainer>-->
+							<f:FormContainer>
+								<f:formElements>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Act_gmov_dt}"></Label>
+										</f:label>
+										<f:fields>
+											<DatePicker class="InputAlignRes" width="80%" valueFormat="yyyy-MM-dd" displayFormat="dd-MM-yyyy" enabled="false" id="Act_gmov_dt"/>
+										</f:fields>
+									</f:FormElement>
+									<!--<HBox>-->
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Act_PO_dt}"></Label>
+										</f:label>
+									
+										<f:fields>
+											<HBox>
+											<DatePicker class="InputAlignRes" valueFormat="yyyy-MM-dd" width="70%" 
+											displayFormat="dd-MM-yyyy"  enabled="false" id="Act_PO_dt"/>
+											<TimePicker class="InputAlignRes"  enabled="false" width="70%" id="Act_PO_tim"/>
+											</HBox>
+										</f:fields>
+										</f:FormElement>
+										
+									<!--	<f:FormElement>-->
+									<!--	<f:fields>-->
+									<!--		<Input class="InputAlignRes" width="70%" enabled="false" id="Act_PO_tim"/>-->
+									<!--	</f:fields>-->
+									
+									<!--</f:FormElement>-->
+										<!--</HBox>-->
+									<!--<f:FormElement>-->
+									<!--	<f:label>-->
+									<!--		<Label class="lblAlignRes" text="{i18n>Exchange}"></Label>-->
+									<!--	</f:label>-->
+									<!--	<f:fields>-->
+									<!--		<Input class="InputAlignRes" enabled="false" id="Exchange"/>-->
+									<!--	</f:fields>-->
+									<!--</f:FormElement>-->
+								</f:formElements>
+							</f:FormContainer>
+							<f:FormContainer>
+								<f:formElements>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Tot_gds_mt_Stat}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" width="70%" enabled="false" id="Tot_gds_mt_Stat"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>POD_Status}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" width="70%" enabled="false" id="POD_Status"/>
+										</f:fields>
+									</f:FormElement>
+									<!--<f:FormElement>-->
+									<!--	<f:label>-->
+									<!--		<Label class="lblAlignRes" text="{i18n>AverageNetPrice}"></Label>-->
+									<!--	</f:label>-->
+									<!--	<f:fields>-->
+									<!--		<Input class="InputAlignRes" enabled="false" id="AverageNetPrice"/>-->
+									<!--	</f:fields>-->
+									<!--</f:FormElement>-->
+								</f:formElements>
+							</f:FormContainer>
+						</f:formContainers>
+					</f:Form>
+					<Table id="table" items="{tablejson>/results/0/F4ItemNav/results}"
+					mode="None" noDataText="No data"
+						busyIndicatorDelay="{tablejson>/tableBusyDelay}" growing="true" growingScrollToLoad="true"
+						updateFinished="onUpdateFinished"
+						class="newTableClass sapUiSizeCompact">
+						<headerToolbar >
+							<Toolbar class="WorklistTable1">
+								<Title level="H4" text="{i18n>ITEMSOVERVIEW}" class="panelHeaderTextClass"/>
+								<ToolbarSpacer></ToolbarSpacer>
+							
+								<!--<Button icon="sap-icon://add" id="idPlusButton" enabled="true" type="Accept" -->
+								<!--press="NavtoNew" class="Addbuttonclass" tooltip="Add"></Button>-->
+								<!--<Button icon="sap-icon://delete" type="Reject" tooltip="Delete" press="Delete"></Button>-->
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="auto">
+								<header>
+									<Label text="{i18n>ItemNo}" class="tableheaderClass"></Label>
+								</header>
+							</Column>
+							<Column minScreenWidth="small" demandPopin="true">
+								<header>
+									<Label text="{i18n>Material}" class="tableheaderClass"></Label>
+								</header>
+							</Column>
+							<Column minScreenWidth="small" demandPopin="true">
+								<header>
+									<Label text="{i18n>Deliv_Qty}" class="tableheaderClass"></Label>
+								</header>
+							</Column>
+							<Column minScreenWidth="small" demandPopin="true">
+								<header>
+									<Label text="{i18n>POD_Qty}" class="tableheaderClass"></Label>
+								</header>
+							</Column>
+							<!--<Column minScreenWidth="small" demandPopin="true">-->
+							<!--	<header>-->
+							<!--		<Label text="{i18n>SU}" class="tableheaderClass"></Label>-->
+							<!--	</header>-->
+							<!--</Column>-->
+							<Column minScreenWidth="small" width="1.5rem" demandPopin="true">
+								<header>
+									<!--<Label text="{i18n>QuandiffinSKU}" class="tableheaderClass"></Label>-->
+								</header>
+							</Column>
+							<Column minScreenWidth="small" demandPopin="true">
+								<header>
+									<Label text="{i18n>reason}" class="tableheaderClass"></Label>
+								</header>
+							</Column>
+							<Column minScreenWidth="small" demandPopin="true">
+								<header>
+									<Label text="{i18n>QuandiffinSalesUnr}" class="tableheaderClass"></Label>
+								</header>
+							</Column>
+							<Column minScreenWidth="small" demandPopin="true">
+								<header>
+									<Label text="{i18n>Batch}" class="tableheaderClass"></Label>
+								</header>
+							</Column>
+							<Column minScreenWidth="small" demandPopin="true">
+								<header>
+									<Label text="{i18n>QuandiffinSKU}" class="tableheaderClass"></Label>
+								</header>
+							</Column>
+							<Column minScreenWidth="small" demandPopin="true">
+								<header>
+									<Label text="{i18n>Plant}" class="tableheaderClass"></Label>
+								</header>
+							</Column>
+							<Column minScreenWidth="small" demandPopin="true">
+								<header>
+									<Label text="{i18n>Sloc}" class="tableheaderClass"></Label>
+								</header>
+							</Column>
+							
+							
+						</columns>
+						<items>
+							<ColumnListItem id="LRS2_LISTITEM1" type="Inactive">
+								<cells>
+									<Text text="{tablejson>Posnr}"/>
+									<ObjectIdentifier title="{tablejson>Matnr}" text="{tablejson>Arktx}"/>
+									<ObjectIdentifier title="{tablejson>Lfimg}" text="{tablejson>Vrkme}"/>
+									<ObjectIdentifier title="{tablejson>Podmg}" text="{tablejson>Vrkme}"/>
+									<Button icon="sap-icon://form" type="Accept" text=""	tooltip="POD Details : Reasons and Qnites" 
+									press="onRollover" id="DetailsInfo"/>
+									<ObjectIdentifier title="{tablejson>Grund}" text="{tablejson>Gtext}"/>
+									<ObjectIdentifier title="{tablejson>LfimgDiff}" text="{tablejson>Vrkme}"/>
+									<Text text="{tablejson>Charg}"/>
+									<ObjectIdentifier title="{tablejson>LgmngDiff}" text="{tablejson>Meins}"/>
+									<Text text="{tablejson>Werks}"/>
+									<Text text="{tablejson>Lgort}"/>
+									
+									
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+				<footer id="Green">
+					<Bar>
+						<contentRight>
+								<!--<Button  text="{i18n>simulate}" type="Accept" tooltip="{i18n>simulate}" press="onSimulate"></Button>-->
+					
+							<Button icon="sap-icon://save" text="{i18n>save}" enabled="false" 
+							type="Accept" tooltip="{i18n>save}" id = "savebtn" press="onSubmit"></Button>
+						
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

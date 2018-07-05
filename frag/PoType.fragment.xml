@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>DocType}" items="{DocumentTypesSet>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="PoTypeValueHelpClose"
+		cancel="PoTypeValueHelpClose" liveChange="PoTypeSearch" search="PoTypeSearch">
+		<StandardListItem title="{DocumentTypesSet>Batxt}" description="{DocumentTypesSet>Bsart}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

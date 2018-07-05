@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>GLAccount}" items="{GlAcc>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="GlAccValueHelpClose"
+		cancel="GlAccValueHelpClose" liveChange="GlAccSearch" search="GlAccSearch">
+		<StandardListItem title="{GlAcc>Saknr}" description="{GlAcc>Mcod1}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

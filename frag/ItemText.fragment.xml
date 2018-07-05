@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>Text}" items="{itemdialog>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="_handleItemValueHelpClose"
+		cancel="_handleItemValueHelpClose">
+		<StandardListItem title="{itemdialog>Tdid}" description="{itemdialog>Tdtext}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

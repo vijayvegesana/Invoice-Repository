@@ -1,0 +1,95 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.ui.commons.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<Dialog verticalScrolling="true" stretchOnPhone="true" type="Standard" contentHeight="60%" contentWidth="65%">
+		<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Label text="Quantity Distribution per Item"></Label>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<content>
+		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="4" labelSpanM="3" labelSpanS="12"
+				adjustLabelSpan="false" emptySpanXL="4" emptySpanL="6" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+				singleContainerFullSize="false" >
+				<f:content>
+					<Label design="Bold" text="Item Number"></Label>
+					<Input value="{BulbJson>/0/Posnr}" enabled = "false" class="sapUiSizeCompact"></Input>
+					<Label design="Bold" text="Material"></Label>
+					<Input value="{BulbJson>/0/Matnr}" description="{BulbJson>/0/Arktx}" enabled = "false" class="sapUiSizeCompact"></Input>
+					<Label design="Bold" text="Delivery Qty"></Label>
+					<Input value="{BulbJson>/0/Lfimg}" description="{BulbJson>/0/Vrkme}" enabled = "false" class="sapUiSizeCompact"></Input>
+					<Label design="Bold" text="POD Quantity"></Label>
+					<Input value="{BulbJson>/0/Podmg}" enabled = "false" class="sapUiSizeCompact"></Input>
+				</f:content>
+			</f:SimpleForm>
+			<SearchField liveChange="onRolloverF4Search" visible="false"/>
+			<ScrollContainer horizontal="false" vertical="true" height="100%">
+				<Table class="newTableClass" itemPress="onBulbFragSelect" items="{BulbJson>/}">
+					<!--items="{BulbJson/results/0/F4RollOverNav/results}"-->
+					<headerToolbar >
+						<Toolbar class="WorklistTable1">
+							<SearchField liveChange="onRolloverF4Search" visible="false"/>
+							<ToolbarSpacer></ToolbarSpacer>
+							<!--<Button icon="sap-icon://add" type="Accept" press="onRolloverAdd" class="Addbuttonclass"></Button>-->
+						</Toolbar>
+					</headerToolbar>
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							<header>
+								<Label  text="Reason" class="tableheaderClass"></Label>
+							</header>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" >
+							<header>
+								<Label text="{i18n>QuandiffinSalesUnr}" class="tableheaderClass"></Label>
+							</header>
+						</Column >
+						<Column minScreenWidth="Tablet" demandPopin="true" >
+							<header>
+								<Label text="{i18n>QuandiffinSKU}" class="tableheaderClass"></Label>
+							</header>
+						</Column >
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<header>
+								<Label text="{i18n>DescReason}" class="tableheaderClass"></Label>
+							</header>
+						</Column >
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<header>
+								<Label text="{i18n>Calc}" class="tableheaderClass"></Label>
+							</header>
+						</Column >
+					</columns>
+					<items>
+						<ColumnListItem class="itemTabFragClass sapUiSizeCompact" type="Inactive">
+							<cells>
+							<!--	<Text text="{Posnr}"></Text>-->
+							<ComboBox  value="{BulbJson>Grund}" class="formControl" items="{oRolloverComboBoxModel>/}" change="onComboBoxChange" showSecondaryValues="true" width="100%">
+													<core:ListItem class="formControl" key="{oRolloverComboBoxModel>Calcu}" text="{oRolloverComboBoxModel>Grund}" additionalText="{oRolloverComboBoxModel>Gtext}"/>
+													<!--<core:Item class="formControl" text="{wFPONavList>Ebeln}"/>-->
+												</ComboBox>
+							<!--<ComboBox  value="{BulbJson>Grund}" items="{oRolloverComboBoxModel>/}" selectionChange="onComboBoxChange">-->
+							<!--			<core:Item key="{oRolloverComboBoxModel>Gtext}" text="{oRolloverComboBoxModel>Grund} - {oRolloverComboBoxModel>Gtext}"/>-->
+							<!--		</ComboBox>-->
+								<Input value="{BulbJson>LfimgDiff}" change="onLfingChange" submit="onLfingChange" description="{BulbJson>Vrkme}"/>
+								<Input value="{BulbJson>LgmngDiff}" description="{BulbJson>Meins}"/>
+								<Input value="{BulbJson>Gtext}"/>
+								<Text textAlign="Center" text="{BulbJson>Calcu}"/>
+								<!--<core:Icon src="sap-icon://add"  />-->
+								<!--<Text text="{tableundjson>/Posnr}"/>-->
+								<!--<ComboBox items="{RollOverJson>/results/0/F4RollOverMonthsNav/results}" change="onChange">-->
+								<!--	<core:Item text="{RollOverJson>Text}"/>-->
+								<!--</ComboBox>-->
+								<!--<Input value="{BulbTableTJson>Dfbas}"/>-->
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</ScrollContainer>
+		</content>
+		<endButton>
+			<Button text="OK" press="onBulbFragOk"></Button>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

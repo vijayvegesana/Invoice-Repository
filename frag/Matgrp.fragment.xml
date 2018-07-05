@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>MatGrp}" items="{Matgrp>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="MatgrpValuehelpClose"
+		cancel="MatgrpValuehelpClose" liveChange="MatgrpSearch" search="MatgrpSearch">
+		<StandardListItem title="{Matgrp>Matkl}" description="{Matgrp>Wgbez}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

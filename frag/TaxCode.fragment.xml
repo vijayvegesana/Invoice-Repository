@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>TaxCode}" items="{TaxCode>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="_handleTaxcodeValueHelpClose"
+		cancel="_handleTaxcodeValueHelpClose" liveChange="taxCodeSearch" search="taxCodeSearch">
+		<StandardListItem title="{TaxCode>Mwskz}" description="{TaxCode>Text1}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

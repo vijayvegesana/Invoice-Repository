@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" controllerName="sap.ex.pr.view.detailAsset" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+	<Dialog confirm="_handleValueHelpClose" cancel="_handleValueHelpClose" title="Assigned Details">
+		<content>
+			<l:Grid defaultSpan="L12 M12 S12" class="sapUiSizeCompact clPanel Bgcol">
+				<l:content>
+					<Panel class="">
+						<Label class="AlignRes sapUiSmallMarginEnd" text="{i18n>Grage}"></Label>
+						<Label class="AlignRes sapUiSmallMarginEnd" text="{i18n>UOM}"></Label>
+						<Label class="AlignRes sapUiSmallMarginEnd" text="{i18n>Currency}"></Label>
+					</Panel>
+					<Panel class="">
+						<Label class="AlignRes" text="{i18n>Exp}"></Label>
+						<Input class="AlignRes"/>
+						<Input class="AlignRes"/>
+					</Panel>
+					<Panel class="">
+						<Label class="AlignRes" text="{i18n>Low}"></Label>
+						<Input class="AlignRes"/>
+						<Input class="AlignRes"/>
+					</Panel>
+				</l:content>
+			</l:Grid>
+		</content>
+		<beginButton>
+			<Button text="Save" type="Accept" press="fragmentSave" icon="sap-icon://save"/>
+		</beginButton>
+		<endButton>
+			<Button id="" press="close" text="close"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

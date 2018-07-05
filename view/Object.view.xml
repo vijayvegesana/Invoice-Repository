@@ -1,0 +1,152 @@
+<mvc:View controllerName="com.olam.prof.del.controller.Object" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="{i18n>title}" showNavButton="true" class="pageBackgroundImgClass" navButtonPress="back">
+				<content>
+					<f:Form id="idSecondForm" editable="true" class="sapUiSizeCompact">
+						<f:toolbar >
+							<Toolbar>
+									<Title id="objectViewPONoId" class="panelHeaderTextClass"></Title>
+								<ToolbarSpacer/>
+								<Title id="objectViewVendorNoId" class="panelHeaderTextClass"></Title>
+							</Toolbar>
+						</f:toolbar>
+						<f:layout>
+							<f:ResponsiveGridLayout labelSpanXL="2" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0"
+								emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false"/>
+						</f:layout>
+						<f:formContainers>
+							<f:FormContainer>
+								<f:formElements>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>FixationNumber}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false" id="FixationNumber"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Terminal}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false" id="Terminal"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Fix.Date}"></Label>
+										</f:label>
+										<f:fields>
+										<!--	<DatePicker class="InputAlignRes" id="Fix.Date" valueFormat="yyyy-MM-dd" 
+											displayFormat="yyyy-MM-dd"/>-->
+												<DatePicker class="InputAlignRes" id="Fix.Date" enabled="false" valueFormat="dd-MM-yyyy" displayFormat="dd-MM-yyyy"/>
+									
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Fix.Lot}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false" id="Fix.Lot"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Fix.Price}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false" id="Fix.Price"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Fix Cur/}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false" id="FixCur"/>
+										</f:fields>
+									</f:FormElement>
+										<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>NetPrice}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false" id="netPriceId">
+												<customData>
+													<core:CustomData value=""></core:CustomData>
+												</customData>
+											</Input>
+										</f:fields>
+									</f:FormElement>
+								</f:formElements>
+							</f:FormContainer>
+							<f:FormContainer>
+								<f:formElements>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Broker}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" id="Broker" showValueHelp="true" valueHelpRequest="onBrokerF4"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>BrokerName}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false" id="BrokerName"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Buyer}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" id="Buyer" showValueHelp="true" valueHelpRequest="onbuyerf4"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>Label10}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false" id="Label10"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>FixQty}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false" id="FixQty"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label class="lblAlignRes" text="{i18n>DiffBas}"></Label>
+										</f:label>
+										<f:fields>
+											<Input class="InputAlignRes" enabled="false" id="DiffBas"/>
+										</f:fields>
+									</f:FormElement>
+								</f:formElements>
+							</f:FormContainer>
+						</f:formContainers>
+					</f:Form>
+				</content>
+				<footer>
+					<Bar>
+						<contentRight>
+							<Button id="saveChanges" type="Accept" icon="sap-icon://save" press="saveChanges" text="{i18n>saveChanges}"></Button>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

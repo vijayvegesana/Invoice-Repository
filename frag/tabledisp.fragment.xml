@@ -1,0 +1,38 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog id="idtab" noDataText="No Customers Found" title="Header Text" draggable="true" resizable="true" contentHeight="20rem"
+		contentWidth="20rem" class="sapUiPopupWithPadding dialogHeaders">
+		<content>
+			<Table >
+				<ColumnListItem>
+					<cells>
+						<ObjectIdentifier id="Headertext" title="Header Text"></ObjectIdentifier>
+						<HBox>
+							<items>
+								<Link id="Linkid" text="Add Note" press="Press" wrapping="true" width="10em"></Link>
+								<FeedInput placeholder="" id="tableid" post="onPost" showIcon="false" visible="false"/>
+							</items>
+						</HBox>
+					</cells>
+				</ColumnListItem>
+				<columns>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<header>
+							<Text text="Text Description"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<header>
+							<Text text="Note"/>
+						</header>
+					</Column>
+				</columns>
+			</Table>
+		</content>
+		<beginButton>
+			<Button text="Ok" press="pressOk"></Button>
+		</beginButton>
+		<endButton>
+			<Button text="Cancel" press="pressCancel"></Button>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

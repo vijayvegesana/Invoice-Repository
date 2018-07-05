@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>unit}" items="{unitdialog>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="_handleUnitValueHelpClose"
+		cancel="_handleUnitValueHelpClose" liveChange="orderUnitSearch" search="orderUnitSearch">
+		<StandardListItem title="{unitdialog>Msehi}" description="{unitdialog>Msehl}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>Acc_ass_cat}" items="{AccAss>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="AccAssValuehelpClose"
+		cancel="AccAssValuehelpClose" liveChange="AccAssSearch" search="AccAssSearch">
+		<StandardListItem title="{AccAss>Knttp}" description="{AccAss>Knttx}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

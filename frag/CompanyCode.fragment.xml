@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>CompCode}" items="{CompanyCodedialog>/results}" class="sapUiSmallMarginBottom dialogHeaders" confirm="_handleCompannyValueHelpClose"
+		cancel="_handleCompannyValueHelpClose" liveChange="companyCodeSearch" search="companyCodeSearch">
+		<StandardListItem title="{CompanyCodedialog>Bukrs}" description="{CompanyCodedialog>Butxt}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

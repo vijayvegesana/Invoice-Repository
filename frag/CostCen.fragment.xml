@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>costcenter}" items="{CostCen>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="CostCenValueHelpClose"
+		cancel="CostCenValueHelpClose" liveChange="CostCenSearch" search="CostCenSearch">
+		<StandardListItem title="{CostCen>Kostl}" description="{CostCen>Mctxt}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

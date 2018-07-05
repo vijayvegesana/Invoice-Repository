@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>Vendor}" items="{Vendordialog>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="_handleVendorValueHelpClose"
+		cancel="_handleVendorValueHelpClose" liveChange="vendorSearch" search="vendorSearch">
+		<ObjectListItem title="{Vendordialog>Lifnr}">
+			<attributes>
+				<ObjectAttribute text="{Vendordialog>Mcod1}" class="WordWrapClass"></ObjectAttribute>
+			</attributes>
+			<firstStatus>
+				<ObjectStatus title="Purchase Org" text="{Vendordialog>Ekorg}"/>
+			</firstStatus>
+			<secondStatus>
+				<ObjectStatus title="Company Code" text="{Vendordialog>BEGRU}"/>
+			</secondStatus>
+		</ObjectListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

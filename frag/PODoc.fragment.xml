@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>DeliveryNo}" items="{POJson>/results/0/F4DeliveryNav/results}" class="sapUiPopupWithPadding dialogHeaders"
+		confirm="_handlePODOCValueHelpClose" cancel="_handlePODOCValueHelpClose" liveChange="purchDOCSearch" search="purchDOCSearch">
+		<StandardListItem title="{POJson>Vbeln}" description="{POJson>Vstel}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

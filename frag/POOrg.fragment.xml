@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>PurchOrg}" items="{dialog>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="_handleValueHelpClose"
+		cancel="_handleValueHelpClose" liveChange="handleSearch" search="handleSearch">
+		<StandardListItem title="{dialog>Ekorg}" description="{dialog>Ekotx}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

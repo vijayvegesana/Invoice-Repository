@@ -1,0 +1,118 @@
+{
+    "resources": [
+        {
+            "name": "frag/TaxCode.fragment.xml"
+        },
+        {
+            "name": "frag/Plant.fragment.xml"
+        },
+        {
+            "name": "frag/Conditiontype.fragment.xml"
+        },
+        {
+            "name": "frag/Vendor.fragment.xml"
+        },
+        {
+            "name": "frag/ItemText.fragment.xml"
+        },
+        {
+            "name": "frag/POOrg.fragment.xml"
+        },
+        {
+            "name": "frag/CompanyCode.fragment.xml"
+        },
+        {
+            "name": "frag/POGrp.fragment.xml"
+        },
+        {
+            "name": "frag/unit.fragment.xml"
+        },
+        {
+            "name": "frag/Material.fragment.xml"
+        },
+        {
+            "name": "frag/Currency.fragment.xml"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "css/css.css"
+        },
+        {
+            "name": "resources.json",
+            "merged": true
+        },
+        {
+            "name": ".user.project.json"
+        },
+        {
+            "name": "view/Worklist.view.xml"
+        },
+        {
+            "name": "view/ObjectNotFound.view.xml"
+        },
+        {
+            "name": "view/Object.view.xml"
+        },
+        {
+            "name": "view/NotFound.view.xml"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": ".project.json"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "model/Table2Data.json"
+        },
+        {
+            "name": "model/formatter.js"
+        },
+        {
+            "name": "model/TableData.json"
+        },
+        {
+            "name": "controller/BaseController.js"
+        },
+        {
+            "name": "controller/Worklist.controller.js"
+        },
+        {
+            "name": "controller/App.controller.js"
+        },
+        {
+            "name": "controller/NotFound.controller.js"
+        },
+        {
+            "name": "controller/Object.controller.js"
+        },
+        {
+            "name": "controller/ErrorHandler.js"
+        }
+    ]
+}

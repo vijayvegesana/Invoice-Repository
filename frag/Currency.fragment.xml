@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog id="idCurrencyDialog" title="{i18n>Currency}" items="{Currencydialog>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="_handleCurrencyValueHelpClose"
+		cancel="_handleCureencyValueHelpClose" liveChange="currencySearch" search="currencySearch">
+		<StandardListItem title="{Currencydialog>Waers}" description="{Currencydialog>Ltext}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

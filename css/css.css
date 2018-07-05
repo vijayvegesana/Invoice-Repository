@@ -1,0 +1,106 @@
+.newTableClass > .sapMListTbl th {
+    background: #008bc7 ! important;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.sapMLabel1 {
+    color: #0c0c0c;
+    font-size: 0.782rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.itemClass{
+	 background:#f7cb0430 ! important;
+}
+
+.sapMLabel {
+    white-space: pre-wrap !important;
+}
+
+.sapMIBar-CTX .sapMTitle {
+    color: #008bc7 !important;
+    text-shadow: none;
+}
+
+
+/*Grid Responsive css Start*/
+
+.AlignRes {
+    width: 5rem;
+}
+
+.lblAlignRes {
+    width: 10rem;
+    /* padding-top: 0.5rem !important;
+  padding-right: 0.5rem;*/
+    color: #00679e !important;
+    ;
+}
+
+.InputAlignRes {
+    /* width : 18rem ! important;*/
+}
+
+.clPanel .sapMPanelContent:not(.sapMPanelBGTransparent) {
+    border-bottom: 0rem !important;
+}
+
+.clPanel .sapMPanelContent {
+    padding: 0rem !important;
+}
+
+.clPanel .sapUiRespGrid.sapUiRespGridVSpace1>div {
+    margin-bottom: 0rem !important;
+}
+
+.Bgcol {
+    background: #FFFFFF!important;
+}
+  
+.clPanel.sapUiRespGrid.sapUiRespGridVSpace1>div {
+    margin-bottom: 0rem!important;
+}
+
+.clPanel.sapUiRespGrid.sapUiRespGridHSpace1 {
+    padding: 1rem!important;
+}
+
+
+/*Grid Responsive css END*/
+
+
+/*Panel Header Text Color*/
+
+.panelHeaderTextClass {
+    color: #FFFFFF !important;
+    background-color: transparent;
+    font-weight: normal;
+    font-size: 1.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 0.0625rem 0 #ffffff;
+}
+
+
+/*Table Column Header Text Color*/
+
+.tableheaderClass {
+    padding-top: 1px;
+    font-size: 0.875rem;
+    color: white ! important;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 480px) {
+    .lblAlignRes {
+        width: 97%!important;
+        padding-top: 0.5rem !important;
+        padding-right: 0.5rem;
+        text-align: left !important;
+        color: #00679e !important;
+        ;
+    }
+    .InputAlignRes {
+        width: 100%!important;
+    }
+}

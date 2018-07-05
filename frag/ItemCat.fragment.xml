@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>Itm_cat}" items="{ItemCat>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="ItemCatValuehelpClose"
+		cancel="ItemCatValuehelpClose" liveChange="ItemCatSearch" search="ItemCatSearch">
+		<StandardListItem title="{ItemCat>Epstp}" description="{ItemCat>Ptext}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

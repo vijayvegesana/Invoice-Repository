@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>Order}" items="{Order>/results}" class="sapUiPopupWithPadding dialogHeaders" confirm="OrderValueHelpClose"
+		cancel="OrderValueHelpClose" liveChange="OrderSearch" search="OrderSearch">
+		<StandardListItem title="{Order>Aufnr}" description="{Order>Ktext}"></StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

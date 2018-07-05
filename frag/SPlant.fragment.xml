@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="{i18n>sPlant}" items="{Plantdialog>/results}" class="sapUiPopupWithPadding dialogHeaders"
+		confirm="S_handlePlantValueHelpClose" cancel="S_handlePlantValueHelpClose" liveChange="SplantSearch" search="SplantSearch">
+		<ObjectListItem title="{Plantdialog>Plant}">
+			<attributes>
+				<ObjectAttribute text="{Plantdialog>Name1}" class="WordWrapClass"></ObjectAttribute>
+			</attributes>
+			<firstStatus>
+				<ObjectStatus title="Purchase Org" text="{Plantdialog>Ekorg}"/>
+			</firstStatus>
+			<secondStatus>
+				<ObjectStatus title="Purchase Org Desc" text="{Plantdialog>EkorgDesc}"/>
+			</secondStatus>
+		</ObjectListItem>
+	</SelectDialog>
+</core:FragmentDefinition>
